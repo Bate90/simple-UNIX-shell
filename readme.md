@@ -53,7 +53,7 @@ return 0;
 } 
 ```
  
-##Part I— Creating a Child Process 
+## Part I— Creating a Child Process 
 The first task is to modify the main() function in Figure 3.36 so that a child process is forked and executes the command specified by the user. This will require parsing what the user has entered into separate tokens and storing the tokens in an array of character strings ( args in Figure 3.36). For example, if the user enters the command ps -ael at the osh> prompt, the values stored in the args array are: 
  
 args[0] = "ps" args[1] = "-ael" 
@@ -68,7 +68,7 @@ execvp(char *command, char *params[]);
 Here, command represents the command to be performed and params stores the parameters to this command. For this project, the execvp() function should be invoked as execvp(args[0], args) . Be sure to check whether the user included an & to determine whether or not the parent process is to wait for the child to exit.Programming Projects 
 159 
  
-##Part II—Creating a History Feature 
+## Part II—Creating a History Feature 
  
 The next task is to modify the shell interface program so that it provides a history feature that allows the user to access the most recently entered commands. The user will be able to access up to 10 commands by using the feature. The commands will be consecutively numbered starting at 1, and the numbering will continue past 10. For example, if the user has entered 35 commands, the 10 most recent commands will be numbered 26 to 35. 
  
