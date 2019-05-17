@@ -5,8 +5,13 @@ This project consists of designing a C program to serve as a shell interface tha
 ```c
 osh>  
 ```
-and the user’s next command: cat prog.c . (This command displays the file prog.c on the terminal using the UNIX cat command.) 
- 
+and the user’s next command: 
+
+```c
+cat prog.c  
+``` 
+This command displays the file prog.c on the terminal using the UNIX cat command.
+
 ```c
 osh> cat prog.c 
 ```
@@ -25,8 +30,8 @@ The separate child process is created using the fork() system call, and the user
 A C program that provides the general operations of a command-line shell is supplied in Figure 3.36. The main() function presents the prompt osh-> and outlines the steps to be taken after input from the user has been read. The main() function continually loops as long as should run equals 1; when the user enters exit at the prompt, your program will set should run to 0 and terminate. 
  
 This project is organized into two parts:  
-(1)	creating the child process and executing the command in the child, and  
-(2)	modifying the shell to allow a history feature 
+1.	creating the child process and executing the command in the child, and  
+2.	modifying the shell to allow a history feature 
  
  
  
